@@ -7,6 +7,10 @@
   padding: 10px 0px;
   border-radius: 6px;
 }
+hr{
+  width: 30%;
+  color: black;
+}
   .listproduct-format-main {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;

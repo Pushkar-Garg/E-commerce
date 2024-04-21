@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./AddProduct.css";
-import upload_area from "../Assets/upload_area.svg";
+import "./CSS/AddProduct.css"
+import upload_area from "../Components/Assets/upload_area.svg";
 
 const AddProduct = () => {
 

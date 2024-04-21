@@ -11,8 +11,8 @@ import men_banner from './Components/Assets/exclusive_image.png'
 import women_banner from './Components/Assets/product_223.png'
 import kid_banner from './Components/Assets/hero_image.png'
 import MenuSetting from './Components/MenuSetting/MenuSetting';
-import AddProduct from './Components/AddProduct/AddProduct';
-import ListProduct from './Components/ListProduct/ListProduct';
+import AddProduct from "./Pages/AddProduct"
+import ListProduct from './Pages/ListProduct';
 import { useState, useContext} from 'react';
 import { ShopContext } from './Context/ShopContext';
 

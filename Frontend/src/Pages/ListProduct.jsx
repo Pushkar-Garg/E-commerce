@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./ListProduct.css";
-import cross_icon from '../Assets/cross_icon.png'
+import "./CSS/ListProduct.css";
+import cross_icon from '../Components/Assets/cross_icon.png'
 
 const ListProduct = () => {
   const [allproducts, setAllProducts] = useState([]);
@@ -34,6 +34,7 @@ const ListProduct = () => {
   return (
     <div className="listproduct">
       <h1>All Products List</h1>
+      <hr />
       <div className="listproduct-format-main">
           <p>Products</p>
           <p className="tittle">Title</p>
