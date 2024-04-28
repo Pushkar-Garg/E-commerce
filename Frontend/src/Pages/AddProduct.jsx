@@ -36,10 +36,10 @@ const AddProduct = () => {
       body: formData,
     })
       .then((resp) => resp.json())
-      .then((data) => {dataObj=data});
+      .then((data) => {dataObj = data});
 
-    if (dataObj.success) {
-      product.image = dataObj.image_url;
+    if (dataObj.filename) {
+      product.image = dataObj.path;
       await fetch('http://localhost:4000/addproduct', {
       method: 'POST',
       headers: {
