@@ -10,7 +10,6 @@ import Footer from './Components/Footer/Footer';
 import men_banner from './Components/Assets/exclusive_image.png'
 import women_banner from './Components/Assets/product_223.png'
 import kid_banner from './Components/Assets/hero_image.png'
-import MenuSetting from './Components/MenuSetting/MenuSetting';
 import AddProduct from "./Pages/AddProduct"
 import ListProduct from './Pages/ListProduct';
 import { useState, useContext} from 'react';
@@ -22,7 +21,7 @@ function App() {
     <div>
       <BrowserRouter>
       <Navbar/>
-      {menubar? <MenuSetting/> : null}
+      
       <Routes>
         <Route path='/' element={<Shop/>}/>
         <Route path='/mens' element={<ShopCategory banner={men_banner} category="men"/>}/>

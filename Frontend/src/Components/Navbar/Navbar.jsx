@@ -6,7 +6,7 @@ import nav_dropdown from '../Assets/nav_dropdown.png'
 import { Link } from 'react-router-dom'
 import { ShopContext } from '../../Context/ShopContext'
 import { useNavigate } from 'react-router-dom'
-
+import MenuSetting from '../MenuSetting/MenuSetting';
 const Navbar = () => {
 
     const [menu,setMenu] = useState("shop");
@@ -21,6 +21,7 @@ const Navbar = () => {
 
   return (
     <div className='navbar'>
+    {localStorage.getItem("auth-token")? <MenuSetting/> : null}
       <Link to='/' onClick={()=>{setMenu("shop")}} className="nav-logo">
         <img src={logo} alt="" />
         <p>WingShop</p>
