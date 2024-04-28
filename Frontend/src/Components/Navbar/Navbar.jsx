@@ -10,7 +10,7 @@ import MenuSetting from '../MenuSetting/MenuSetting';
 const Navbar = () => {
 
     const [menu,setMenu] = useState("shop");
-    const {getTotalCartItems, menubar,setMenubar}= useContext(ShopContext);
+    const {getTotalCartItems}= useContext(ShopContext);
     const menuRef = useRef();
     const navigate= useNavigate();
 
@@ -35,7 +35,7 @@ const Navbar = () => {
       </ul>
       <div className="nav-login-cart">
       {localStorage.getItem('auth-token')
-        ?<button onClick={()=>{localStorage.removeItem('auth-token'); navigate("/"); setMenubar(!menubar)}}>Logout</button>
+        ?<button onClick={()=>{localStorage.removeItem('auth-token'); navigate("/"); }}>Logout</button>
         :<Link to='/login' style={{ textDecoration: 'none' }}><button>Login</button></Link>}
         <Link to='/cart'><img src={cart_icon} alt="" /></Link>
         <div className="nav-cart-count">{getTotalCartItems()}</div>

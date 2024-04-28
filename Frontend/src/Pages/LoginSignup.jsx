@@ -29,7 +29,6 @@ const LoginSignup = () => {
       if (dataObj.success) {
         localStorage.setItem('auth-token',dataObj.token);
         navigate("/");
-        setMenubar((menu)=>(menu=true));
       }
       else
       {
@@ -53,7 +52,6 @@ const LoginSignup = () => {
       if (dataObj.success) {
         localStorage.setItem('auth-token',dataObj.token);
         navigate("/");
-        setMenubar((menu)=>(menu=true));
       }
       else
       {
