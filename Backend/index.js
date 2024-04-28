@@ -23,7 +23,6 @@ app.post("/upload", upload.single('product'), (req, res) => {
     res.send(req.file)
 })
 
-// Schema for creating Product
 const Product = mongoose.model("Product", {
   id: {
     type: Number,
@@ -88,14 +87,13 @@ app.post("/removeproduct", async (req, res) => {
   res.json({success:true,name:req.body.name})
 });
 
-// Creating API for getting all products
+
 app.get("/allproducts", async (req, res) => {
 	let products = await Product.find({});
   console.log("All Products Fetched");
     res.send(products);
 });
 
-// Schema for creating user model
 const Users = mongoose.model("Users", {
   name: {
     type: String,
@@ -116,7 +114,6 @@ const Users = mongoose.model("Users", {
   },
 });
 
-//Create an endpoint at ip/auth for regestring the user in data base & sending token
 app.post('/signup', async (req, res) => {
         let success = false;
         let check = await Users.findOne({ email: req.body.email });
@@ -144,7 +141,6 @@ app.post('/signup', async (req, res) => {
         res.json({ success: true, token })
 })
 
-//Create an endpoint at ip/login for login the user and giving auth-token
 app.post('/login', async (req, res) => {
     let success = false;
     let user = await Users.findOne({ email: req.body.email });
@@ -169,6 +165,5 @@ app.post('/login', async (req, res) => {
 })
 
 app.listen(port, (error) => {
-  if (!error) console.log("Server Running on port " + port);
-  else console.log("Error : ", error);
+  console.log("Server Running on port " + port);
 });
