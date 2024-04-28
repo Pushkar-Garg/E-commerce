@@ -58,7 +58,6 @@ const Product = mongoose.model("Product", {
 
 
 app.post("/addproduct", async (req, res) => {
-  //logic to get rid of adding `id` with each request
   let products = await Product.find({});
   let id;
   if (products.length>0) {
